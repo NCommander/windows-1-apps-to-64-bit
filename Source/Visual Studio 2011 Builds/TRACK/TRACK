@@ -1,0 +1,25 @@
+#
+#  Standard command line definitions
+#
+
+cp=cl -d -c -AS -Gsw -Os -Zpe
+
+#
+#  Standard inference rules
+#
+.c.obj:
+    $(cp) $*.c
+
+#
+#  The C File List
+#
+
+track.obj: track.c track.h
+
+track.res: track.rc track.h track.ico
+    rc -r track.rc
+
+track.exe: track.obj track.res track.def
+    link4 track,track/align:16,track/map,slibw slibc libh/NOD,track.def
+    mapsym track
+    rc track.res
