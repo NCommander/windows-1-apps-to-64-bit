@@ -1,0 +1,32 @@
+#
+#  Standard command line definitions
+#
+
+cp=cl -d -c -AM -Gsw -Os -Zpe -NT
+
+#
+#  Standard inference rules
+#
+.c.obj:
+    $(cp) $*.c
+
+#
+#  The C File List
+#
+
+tempNRES.obj: tempNRES.c template.h
+    $(cp) _NRES tempNRES.c
+
+tempINIT.obj: tempINIT.c template.h
+    $(cp) _INIT tempINIT.c
+
+tempRES.obj: tempRES.c   template.h
+    $(cp) _RES tempRES.c
+
+template.res: template.rc template.ico template.h
+    rc -r template.rc
+
+template.exe: template.def tempNRES.obj tempINIT.obj tempRES.obj template.res
+    link4 tempNRES tempINIT tempRES, template/align:16, /map, mlibw mlibc libh/NOD, template.def
+    mapsym template
+    rc template.res

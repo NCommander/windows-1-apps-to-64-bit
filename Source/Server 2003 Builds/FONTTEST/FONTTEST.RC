@@ -1,0 +1,169 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "fonttest.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+FONTTEST MENU DISCARDABLE 
+BEGIN
+    POPUP "&Commands"
+    BEGIN
+        MENUITEM "&Sample",                     IDMSAMPLE
+        MENUITEM "&Clear",                      IDMCLEAR
+        MENUITEM "&Options...",                 IDMOPTIONS
+    END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+FONTTEST ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "C",            IDMCLEAR,               VIRTKEY,CONTROL, NOINVERT
+    "O",            IDMOPTIONS,             VIRTKEY,CONTROL, NOINVERT
+    "S",            IDMSAMPLE,              VIRTKEY,CONTROL, NOINVERT
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+OPTIONSBOX DIALOG DISCARDABLE  50, 25, 222, 133
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Font Settings"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,5,2,30,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,37,2,30,14,WS_GROUP
+    CHECKBOX        "Italic",IDITALIC,3,20,50,15,WS_GROUP
+    CHECKBOX        "Underline",IDUNDERLINE,3,35,55,15,WS_GROUP
+    CHECKBOX        "StrikeOut",IDSTRIKEOUT,3,50,55,15,WS_GROUP
+    LTEXT           "Height",IDNULL,58,25,30,12
+    EDITTEXT        IDHEIGHT,88,25,30,12,WS_GROUP
+    LTEXT           "MapMode",IDNULL,145,25,40,12
+    EDITTEXT        IDMAPMODE,187,25,25,12,WS_GROUP
+    LTEXT           "Width",IDNULL,58,40,30,12
+    EDITTEXT        IDWIDTH,88,40,30,12,WS_GROUP
+    LTEXT           "Weight",IDNULL,58,55,30,12
+    EDITTEXT        IDWEIGHT,88,55,30,12,WS_GROUP
+    LTEXT           "Escapement",IDNULL,3,70,40,12
+    EDITTEXT        IDESCAPEMENT,48,70,20,12,WS_GROUP
+    LTEXT           "Orientation",IDNULL,3,85,45,12
+    EDITTEXT        IDORIENTATION,48,85,20,12,WS_GROUP
+    LTEXT           "Char Set",IDNULL,78,70,35,12
+    EDITTEXT        IDCHARSET,113,70,20,12,WS_GROUP
+    LTEXT           "",IDTMCHARSET,138,70,20,12
+    LTEXT           "Pitch",IDNULL,78,85,30,12
+    EDITTEXT        IDPITCH,113,85,20,12,WS_GROUP
+    LTEXT           "",IDTMPITCH,138,85,20,12
+    CONTROL         "",IDNULL,"Static",SS_BLACKFRAME,5,105,195,2
+    LTEXT           "Av Char Width",IDNULL,3,110,60,12
+    LTEXT           "",IDAVCHARWIDTH,65,110,12,12
+    LTEXT           "Max Char Width",IDNULL,78,110,60,12
+    LTEXT           "",IDMAXCHARWIDTH,140,110,12,12
+    LTEXT           "",IDTMHEIGHT,120,25,20,12
+    LTEXT           "",IDTMWIDTH,120,40,20,12
+    LTEXT           "",IDTMWEIGHT,120,55,20,12
+END
+
+ABOUTBOX DIALOG DISCARDABLE  22, 17, 154, 75
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Windows 1.0 Fonttest About Dialog"
+BEGIN
+    CTEXT           "Microsoft Windows",-1,0,5,154,8
+    ICON            "FontTest",-1,9,23,0,0
+    CTEXT           "FontTest application",-1,0,14,154,8
+    CTEXT           "Version 1.03",-1,30,34,94,8
+    CTEXT           "Copyright \251 1985,1986, Microsoft Corp.",-1,0,47,154,
+                    9
+    DEFPUSHBUTTON   "Ok",IDOK,61,59,32,14,WS_GROUP
+END
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""fonttest.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSNAME                 "Fonttest"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSABOUT                "About..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSTITLE                "Font Tester"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSALPHABET             "The quick brown fox etc.  ABCDE 0123 !@#$%(){}[];:<>?,."
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

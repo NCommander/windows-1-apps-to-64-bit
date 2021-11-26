@@ -1,0 +1,30 @@
+NAME    CARDFILE
+
+DESCRIPTION 'Index Card Handler'
+
+STUB 'WINSTUB.EXE'
+
+CODE MOVEABLE DISCARDABLE
+DATA MOVEABLE MULTIPLE
+
+SEGMENTS
+    _TEXT    PRELOAD FIXED
+    _NEW     PRELOAD MOVEABLE DISCARDABLE
+    _FILE    PRELOAD MOVEABLE DISCARDABLE
+    _NRES1   PRELOAD MOVEABLE DISCARDABLE
+    _NRES2   MOVEABLE DISCARDABLE
+    _NRES3   MOVEABLE DISCARDABLE
+
+HEAPSIZE    1000
+STACKSIZE   4000
+
+EXPORTS
+    CardfileWndProc     @1
+    DlgProc             @2
+    fnOpen              @3
+    fnSave              @4
+    fnAbout             @5
+    CardWndProc         @6
+    fnAbortDlgProc      @7
+    fnAbortProc         @8
+    fnDial              @9

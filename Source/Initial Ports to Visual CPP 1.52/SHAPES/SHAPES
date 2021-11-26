@@ -1,0 +1,25 @@
+#
+#  Standard command line definitions
+#
+
+cp=cl -d -c -AS -Gsw -Os -Zpe
+
+#
+#  Standard inference rules
+#
+.c.obj:
+    $(cp) $*.c
+
+#
+#  The C File List
+#
+
+shapes.obj: shapes.c shapes.h
+
+shapes.res: shapes.rc shapes.h shapes.ico
+    rc -r shapes.rc
+
+shapes.exe: shapes.obj shapes.res shapes.def
+    link4 shapes,/align:16,/map,slibw slibc libh/NOD,shapes.def
+    mapsym shapes
+    rc shapes.res

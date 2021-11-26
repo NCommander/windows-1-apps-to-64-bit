@@ -1,0 +1,22 @@
+#include "style.h"
+#include "hello.h"
+
+HELLOICON  ICON    hello.ico
+
+STRINGTABLE
+BEGIN
+    IDSNAME,    "Hello"
+    IDSABOUT,   "About..."
+    IDSTITLE,   "Hello Windows!"
+END
+
+ABOUTBOX DIALOG 22, 17, 154, 75
+STYLE WS_POPUP | WS_DLGFRAME
+BEGIN
+    CTEXT "Microsoft Windows"                   -1, 0,  5, 154, 8
+    ICON  "hello"                               -1,  9, 23,  0, 0
+    CTEXT "Hello application"                   -1,  0, 14, 154, 8
+    CTEXT "Version 1.03"                        -1, 30, 34, 94, 8
+    CTEXT "Copyright © 1985,1986, Microsoft Corp."   -1,  0, 47,154, 9
+    DEFPUSHBUTTON "Ok"                        IDOK, 61, 59, 32, 14, WS_GROUP
+END

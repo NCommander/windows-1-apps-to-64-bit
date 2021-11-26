@@ -1,0 +1,128 @@
+/*
+ * WineMine (rsrc.rc)
+ *
+ * Copyright 2000 Joshua Thielen
+ * Copyright 2003 Marcelo Duarte
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+ */
+
+#include "windows.h"
+
+#include "winemres.h"
+
+/*LANGUAGE LANG_NEUTRAL,SUBLANG_NEUTRAL*/
+
+IDA_WINEMINE ACCELERATORS
+{
+    VK_F2, IDM_NEW, VIRTKEY
+    "X", IDM_EXIT
+}
+
+/* @makedep: winemine.ico */
+WINEMINE ICON rc/winemine.ico
+
+/* @makedep: faces.bmp */
+FACES BITMAP rc/faces.bmp
+
+/* @makedep: leds.bmp */
+LEDS BITMAP rc/leds.bmp
+
+/* @makedep: mines.bmp */
+MINES BITMAP rc/mines.bmp
+
+STRINGTABLE BEGIN
+     IDS_APPNAME, "WineMine"
+     IDS_NOBODY,  "Nobody"
+     IDS_ABOUT,   "Copyright 2000 Joshua Thielen"
+END
+
+MENU_WINEMINE MENU
+BEGIN
+    POPUP "Options" BEGIN
+        MENUITEM "New\tF2",          IDM_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "Mark Question",    IDM_MARKQ
+        MENUITEM SEPARATOR
+        MENUITEM "Beginner",         IDM_BEGINNER
+        MENUITEM "Advanced",         IDM_ADVANCED
+        MENUITEM "Expert",           IDM_EXPERT
+        MENUITEM "Custom...",        IDM_CUSTOM
+        MENUITEM SEPARATOR
+        MENUITEM "Exit\tAlt+X",      IDM_EXIT
+    END
+    POPUP "Info" BEGIN
+        MENUITEM "Fastest Times...", IDM_TIMES
+        MENUITEM "About WineMine...", IDM_ABOUT
+    END
+END
+
+DLG_TIMES DIALOG 0, 0, 160, 80
+STYLE  WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_POPUP 
+CAPTION "Fastest Times"
+BEGIN
+    GROUPBOX        "Fastest Times", -1,  10,  10, 140,  45
+    LTEXT           "Beginner",      -1,  20,  20,  40,   8
+    LTEXT           "Advanced",      -1,  20,  30,  40,   8
+    LTEXT           "Expert",        -1,  20,  40,  40,   8
+    LTEXT           "999",          IDC_TIME1,  70,  20,  15,   8
+    LTEXT           "999",          IDC_TIME2,  70,  30,  15,   8
+    LTEXT           "999",          IDC_TIME3,  70,  40,  15,   8
+    LTEXT           "",             IDC_NAME1,  90,  20,  55,   8
+    LTEXT           "",             IDC_NAME2,  90,  30,  55,   8
+    LTEXT           "",             IDC_NAME3,  90,  40,  55,   8
+    DEFPUSHBUTTON   "OK",                IDOK,  55,  60,  50,  15 
+END
+
+DLG_CONGRATS DIALOG  0, 0, 160, 60
+STYLE  WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_POPUP 
+CAPTION "Congratulations!"
+BEGIN
+    LTEXT           "Please enter your name", -1,  10,  10, 150,  10
+    EDITTEXT                              IDC_EDITNAME,  25,  20, 110,  12
+    DEFPUSHBUTTON   "OK",                         IDOK,  60,  40,  40,  15 
+END
+
+DLG_CUSTOM DIALOG  0, 0, 100, 100
+STYLE   WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_POPUP 
+CAPTION "Custom Game"
+BEGIN
+    LTEXT           "Rows",   -1,   5,   5,  30,  10
+    LTEXT           "Cols",   -1,   5,  35,  30,  10
+    LTEXT           "Mines",  -1,   5,  65,  30,  10
+    EDITTEXT              IDC_EDITROWS,   5,  15,  20,  12
+    EDITTEXT              IDC_EDITCOLS,   5,  45,  20,  12
+    EDITTEXT             IDC_EDITMINES,   5,  75,  20,  12
+    DEFPUSHBUTTON   "OK",     IDOK,      40,  30,  50,  15
+    PUSHBUTTON      "Cancel", IDCANCEL,  40,  50,  50,  15 
+END
+
+DLG_ABOUT DIALOG  62, 9, 173, 129
+STYLE   WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_POPUP 
+CAPTION "About WineMine"
+BEGIN
+    CONTROL "WineMine" 0, "static", SS_ICON | WS_CHILD, 7, 5, 16, 17
+    LTEXT "WineMine for Windows 1.x/2.x", -1, 32, 6, 128, 10
+    LTEXT "Version 1.00", -1, 32, 16, 128, 10
+    LTEXT "Copyright 2000 Joshua Thielen", -1, 32, 28, 128, 10
+    LTEXT "Windows 1.x/2.x port 2013 by", -1, 32, 38, 128, 10
+    LTEXT "Nathan Lineback", -1, 32, 48, 128, 10
+    CONTROL "" 6, "static", SS_BLACKFRAME | WS_CHILD, 12, 84, 144, 1
+    LTEXT "For more information, visit Toastytech.com", -1, 32, 90, 120, 20
+    DEFPUSHBUTTON "OK", IDOK, 126, 110, 41, 13
+    LTEXT "This software is licensed under the LGPL", -1, 32, 64, 118, 18
+END
+
+

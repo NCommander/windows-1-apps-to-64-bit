@@ -1,0 +1,94 @@
+#
+#  Standard command line definitions
+#
+as=masm
+
+cp=cl -u -d -c -AS -Gsw -Oas -Zpe -PLM -NT
+
+OBJLIST3 = cfmain.obj   cfpaint.obj  cffile.obj   cfdb.obj \
+           cfinput.obj  cfscroll.obj cfdos.obj    cfcard.obj \
+           cftext.obj   cfprint.obj  cfres.obj    asmsubs.obj \
+           cffind.obj   cfnew.obj    cfclip.obj   cfbitmap.obj \
+           cfdial.obj   cfopen.obj   cfdata.obj
+
+#
+#  Standard inference rules
+#
+.c.obj:
+    $(cp) _TEXT $*.c
+
+.asm.obj:
+    $(as) $*.asm;
+
+#
+#  The C File List
+#
+
+cfdata.obj: cfdata.c
+
+cfres.obj: cfres.c
+
+cfnew.obj: cfnew.c
+    $(cp) _NEW cfnew.c
+
+cfmain.obj:  cfmain.c
+    $(cp) _NRES1 cfmain.c
+
+cfpaint.obj: cfpaint.c
+    $(cp) _NRES1 cfpaint.c
+
+cfinput.obj: cfinput.c
+    $(cp) _NRES1 cfinput.c
+
+cfopen.obj: cfopen.c
+    $(cp) _NRES1 cfopen.c
+
+cfscroll.obj: cfscroll.c
+    $(cp) _NRES1 cfscroll.c
+
+cfcard.obj: cfcard.c
+    $(cp) _NRES1 cfcard.c
+
+cftext.obj: cftext.c
+    $(cp) _NRES1 cftext.c
+
+cffile.obj: cffile.c
+    $(cp) _FILE cffile.c
+
+cfbitmap.obj: cfbitmap.c
+    $(cp) _NRES2 cfbitmap.c
+
+cfclip.obj: cfclip.c
+    $(cp) _NRES2 cfclip.c
+
+cfprint.obj: cfprint.c
+    $(cp) _NRES2 cfprint.c
+
+cffind.obj: cffind.c
+    $(cp) _NRES3 cffind.c
+
+cfdb.obj: cfdb.c
+    $(cp) _NRES3 cfdb.c
+
+cfdial.obj: cfdial.c
+    $(cp) _NRES3 cfdial.c
+
+#
+#  The Assembler File List
+#
+
+asmsubs.obj: asmsubs.asm
+
+cfdos.obj: cfdos.asm
+
+cardfile.res:  cardfile.rc cardfile.ico
+    rc -r cardfile.rc
+
+#
+#   Executable
+#
+
+cardfile.exe:  cardfile.def cardfile.res $(OBJLIST3)
+    link4 @cardfile.lnk
+    mapsym cardfile
+    rc cardfile.res

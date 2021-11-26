@@ -1,0 +1,26 @@
+#
+#  Standard command line definitions
+#
+
+cp=cl -d -c -AS -Gsw -Os -Zpe
+
+#
+#  Standard inference rules
+#
+.c.obj:
+    $(cp) $*.c
+
+#
+#  The C File List
+#
+
+type.obj: type.c type.h
+
+
+type.res: type.rc type.ico type.h
+    rc -r type.rc
+
+type.exe: type.obj type.res type.def
+    link4 type,type/align:16,type/map,slibw,type.def
+    mapsym type
+    rc type.res

@@ -1,0 +1,14 @@
+cfmain.obj   cfpaint.obj  +
+cffile.obj   cfdb.obj     +
+cfinput.obj  cfscroll.obj +
+cfdos.obj    cfcard.obj   +
+cftext.obj   cfprint.obj  +
+cfres.obj    asmsubs.obj  +
+cffind.obj   cfnew.obj    +
+cfclip.obj   cfbitmap.obj +
+cfdial.obj   cfopen.obj   +
+cfdata.obj
+cardfile.exe /ALIGN:4
+cardfile.map/map
+slibw
+cardfile.def

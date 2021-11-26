@@ -1,0 +1,25 @@
+#
+#  Standard command line definitions
+#
+
+cp=cl -d -c -AS -Gsw -Os -Zpe
+
+#
+#  Standard inference rules
+#
+.c.obj:
+    $(cp) $*.c
+
+#
+#  The C File List
+#
+
+fonttest.obj: fonttest.c fonttest.h
+
+fonttest.res: fonttest.rc fonttest.h fonttest.ico
+    rc -r fonttest.rc
+
+fonttest.exe: fonttest.obj fonttest.def fonttest.res
+    link4 fonttest,fonttest/ALIGN:16,fonttest/MAP,slibw,fonttest.def
+    mapsym fonttest
+    rc fonttest.res

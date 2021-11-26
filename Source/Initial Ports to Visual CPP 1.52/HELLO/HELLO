@@ -1,0 +1,26 @@
+
+#
+#  Standard command line definitions
+#
+
+cp=cl -d -c -AS -Gsw -Os -Zpe
+
+#
+#  Standard inference rules
+#
+.c.obj:
+    $(cp) $*.c
+
+#
+#  The C File List
+#
+
+hello.obj: hello.c hello.h
+
+hello.res: hello.rc hello.ico hello.h
+    rc -r hello.rc
+
+hello.exe: hello.obj hello.res hello.def
+    link4 hello,/align:16,/map,slibw,hello.def
+    mapsym hello
+    rc hello.res

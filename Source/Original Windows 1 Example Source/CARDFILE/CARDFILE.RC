@@ -1,0 +1,220 @@
+#include "cardfile.h"
+
+/*********************************************************************/
+/*                                                                   */
+/*  Windows Cardfile - Written by Mark Cliggett                      */
+/*  (c) Copyright Microsoft Corp. 1985,1986 - All Rights Reserved    */
+/*                                                                   */
+/*********************************************************************/
+
+CFICON icon    CARDFILE.ICO
+
+STRINGTABLE
+BEGIN
+/* prompts and such */
+    IDS_DELCURCARD,     "Delete ""%%""?"
+    IDS_CREATEFILE,     "Ok to create the file?"
+    IDS_OKTOSAVE,       "Save current changes: %%"
+    IDS_ABOUT,          "About..."
+    IDS_CARDS,          " Cards"
+    IDS_CARD,           " Card"
+    IDS_UNTITLED,       "(untitled)"
+    IDS_CARDDATA,       "Cardfile data"
+    IDS_PICKUPPHONE,    "Please pick up the phone.  Ok to continue?"
+    IDS_CARDFILE,       "Cardfile"
+/* errors */
+    IDS_ECANTDIAL,      "Cannot dial number."
+    IDS_ECANTPRINTPICT, "Not enough memory to print picture."
+    IDS_EINSMEMORY,     "Not enough memory."
+    IDS_EFILEEXISTS,    "Replace existing %%"
+    IDS_EINVALIDFILE,   "Not a valid filename."
+    IDS_ECLIPEMPTYTEXT, "There is no text in the clipboard."
+    IDS_ENOTEXTSEL,     "No text is selected."
+    IDS_EDISKFULLFILE,  "Not enough disk space to save file."
+    IDS_ECANTMAKETEMP,  "Cannot create temp file.  You cannot make changes."
+    IDS_EINSMEMSAVE,    "Not enough memory.  Card not saved."
+    IDS_EDISKFULLSAVE,  "Not enough disk space to save current card."
+    IDS_EOPENTEMPSAVE,  "Cannot open temp file.  Card not saved."
+    IDS_ECANTREADPICT,  "Not enough memory to read picture."
+    IDS_EINSMEMRUN,     "Not enough memory to run Cardfile."
+    IDS_ENOTVALIDFILE,  "Not a valid card file."
+    IDS_ECANTFIND,      "Cannot find %%"
+    IDS_EINSMEMREAD,    "Not enough memory to read card."
+    IDS_ECANTPRINT,     "Cannot print."
+    IDS_ECLIPEMPTYPICT, "There is no picture in the clipboard."
+    IDS_ENOMODEM,       "There is no modem connected."
+    IDS_ENOPICTURES,    "Not able to print pictures."
+    IDS_ECANTMAKEFILE,  "Cannot create %%"
+    IDS_EMEMPRINT,      "Not enough memory to print."
+    IDS_EDISKPRINT,     "Not enough disk space to print."
+    IDS_STRINGINSERT,   "%%"
+END
+
+DTOPEN dialog  10, 10, 150, 86
+STYLE  WS_POPUP | WS_DLGFRAME | WS_VISIBLE
+BEGIN
+    EDITTEXT                    IDD_EDIT,    46,  2, 100, 12, WS_GROUP | ES_AUTOHSCROLL
+    LISTBOX                     IDD_LISTBOX,  4, 20,  70, 56, LBS_STANDARD | WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON  "Open",      IDOK,        87, 40,  50, 14, WS_GROUP
+    PUSHBUTTON     "Cancel"     IDCANCEL,    87, 58,  50, 14, WS_GROUP
+    LTEXT          "",          IDD_PATH,    78, 20,  60, 12, WS_GROUP
+    RTEXT          "Filename:", -1,           2,  2,  40, 12
+END
+
+DTSAVE  DIALOG 25, 25, 166, 47
+STYLE  WS_POPUP | WS_DLGFRAME WS_VISIBLE
+BEGIN
+    EDITTEXT                     IDD_EDIT,   12, 15, 104, 12, WS_GROUP | ES_AUTOHSCROLL
+    LTEXT       "Save file as:", -1          12,  2,  60, 12
+    RTEXT       "",              IDD_PATH,   80,  2,  72, 12
+    DEFPUSHBUTTON  "Save",       IDOK,      120, 14,  35, 14, WS_GROUP
+    PUSHBUTTON  "Cancel"         IDCANCEL,  120, 32,  35, 14, WS_GROUP
+END
+
+DTHEADER DIALOG 25, 25, 220, 44
+STYLE  WS_POPUP | WS_DLGFRAME | WS_VISIBLE
+BEGIN
+    RTEXT       "Index Line:"   -1,          4,  8,  44,  8
+    EDITTEXT                    IDD_EDIT,   52,  6, 164, 12, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON  "Ok",        IDOK,       60, 24,  40, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON  "Cancel",       IDCANCEL,  120, 24,  40, 14, WS_GROUP | WS_TABSTOP
+END
+
+DTADD DIALOG 25, 25, 192, 44
+STYLE  WS_POPUP | WS_DLGFRAME | WS_VISIBLE
+BEGIN
+    RTEXT       "Add:"      -1,          4,  8,  16,  8
+    EDITTEXT                IDD_EDIT,   24,  6, 164, 12, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON  "Ok",    IDOK,       46, 24,  40, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON  "Cancel",   IDCANCEL,  106, 24,  40, 14, WS_GROUP | WS_TABSTOP
+END
+
+DTMERGE dialog  10, 10, 148, 86
+STYLE  WS_POPUP | WS_DLGFRAME | WS_VISIBLE
+BEGIN
+    EDITTEXT                    IDD_EDIT,    46,  2, 100, 12, WS_GROUP | ES_AUTOHSCROLL
+    LISTBOX                     IDD_LISTBOX,  4, 20,  70, 56, LBS_STANDARD | WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON  "Merge",     IDOK,        87, 40,  50, 14, WS_GROUP
+    PUSHBUTTON     "Cancel"     IDCANCEL,    87, 58,  50, 14, WS_GROUP
+    LTEXT          "",          IDD_PATH,    78, 20,  60, 12, WS_GROUP
+    RTEXT          "Filename:", -1,           2,  2,  40, 12
+END
+
+DTGOTO DIALOG 25, 25, 104, 44
+STYLE  WS_POPUP | WS_DLGFRAME | WS_VISIBLE
+BEGIN
+    RTEXT       "Go To:"    -1,         4,  8, 24,  8
+    EDITTEXT                IDD_EDIT,  32,  6, 68, 12, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON  "Ok",    IDOK,       7, 24, 40, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON  "Cancel",   IDCANCEL,  57, 24, 40, 14, WS_GROUP | WS_TABSTOP
+END
+
+DTFIND DIALOG 25, 25, 104, 44
+STYLE  WS_POPUP | WS_DLGFRAME | WS_VISIBLE
+BEGIN
+    RTEXT       "Find:"    -1,          4,  8, 20,  8
+    EDITTEXT               IDD_EDIT,   28,  6, 72, 12, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON  "Ok",   IDOK,        7, 24, 40, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON  "Cancel",  IDCANCEL,   57, 24, 40, 14, WS_GROUP | WS_TABSTOP
+END
+
+DTABOUT DIALOG 20,20,154, 102
+STYLE  WS_POPUP | WS_DLGFRAME | WS_VISIBLE
+BEGIN
+    CTEXT "Microsoft Windows"                       -1,        0,   5, 154, 8
+    ICON  CFICON                                    -1,        9,  23,   0, 0
+    CTEXT "Cardfile"                                -1,        0,  14, 154, 8
+    CTEXT "Version 1.0x"                            -1,       30,  34,  94, 8
+    CTEXT "Copyright © 1985,1986, Microsoft Corp."  -1,        0,  47, 154, 9
+    CONTROL "", 1, STATIC, SS_BLACKRECT | WS_GROUP ,           0,  76, 154, 2
+    CTEXT "",                                       IDD_EDIT,  0,  86, 154, 8
+    DEFPUSHBUTTON "Ok"                        IDOK, 61, 59, 32, 14, WS_GROUP
+END
+
+DTABORTDLG DIALOG 20,20,90, 64
+STYLE WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Cardfile"
+BEGIN
+   DEFPUSHBUTTON "Cancel"               IDCANCEL, 29, 44, 32, 14, WS_GROUP
+   CTEXT         "Sending",             -1,        0,  8, 90, 8
+   CTEXT         "",                    IDD_EDIT,  0, 18, 90, 8
+   CTEXT         "to print spooler.",   -1,        0, 28, 90, 8
+END
+
+DTDIAL DIALOG 25, 25, 192, 92
+STYLE  WS_POPUP | WS_DLGFRAME | WS_VISIBLE
+BEGIN
+    RTEXT       "Dial:"      -1,          4,  8,  20,  8
+    EDITTEXT                 IDD_EDIT,   28,  6, 160, 12, WS_GROUP | WS_TABSTOP
+    LTEXT       "Dial Type", -1,          4, 24,  36,  8
+    RADIOBUTTON "Tone",      IDD_TONE,   54, 22,  40, 12, WS_GROUP | WS_TABSTOP
+    RADIOBUTTON "Pulse",     IDD_PULSE, 106, 22,  40, 12
+    LTEXT       "Port",      -1,          4, 40,  16,  8, WS_GROUP
+    RADIOBUTTON "COM1",      IDD_COM1,   54, 38,  40, 12, WS_GROUP | WS_TABSTOP
+    RADIOBUTTON "COM2",      IDD_COM2,  106, 38,  40, 12
+    LTEXT       "Baud Rate", -1,          4, 56,  36,  8, WS_GROUP
+    RADIOBUTTON "1200",      IDD_1200,   54, 54,  40, 12, WS_GROUP | WS_TABSTOP
+    RADIOBUTTON "300",       IDD_300,   106, 54,  40, 12
+    DEFPUSHBUTTON  "Ok",     IDOK,       54, 72,  32, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON  "Cancel",    IDCANCEL,  106, 72,  32, 14, WS_GROUP | WS_TABSTOP
+END
+
+CFMENU MENU
+BEGIN
+    POPUP   "File"
+    BEGIN
+        MENUITEM    "New",              IDM_NEW
+        MENUITEM    "Open...",          IDM_OPEN
+        MENUITEM    "Save",             IDM_SAVE
+        MENUITEM    "Save As...",       IDM_SAVEAS
+        MENUITEM    "Print",            IDM_PRINT
+        MENUITEM    "Print All",        IDM_PRINTALL
+        MENUITEM    "Merge...",         IDM_MERGE
+    END
+    POPUP   "Edit"
+    BEGIN
+        MENUITEM    "Undo\tSh/Esc",     IDM_UNDO
+        MENUITEM    "Index...\tF6",     IDM_HEADER
+        MENUITEM    "Cut\tDel",         IDM_CUT
+        MENUITEM    "Copy\tF2",         IDM_COPY
+        MENUITEM    "Paste\tIns",       IDM_PASTE
+        MENUITEM    "Restore",          IDM_RESTORE
+        MENUITEM    SEPARATOR
+        MENUITEM    "Text"              IDM_TEXT,  CHECKED
+        MENUITEM    "Picture"           IDM_BITMAP
+    END
+    POPUP   "View"
+    BEGIN
+        MENUITEM    "Cards\tF9",        IDM_CARDFILE
+        MENUITEM    "List\tF10",        IDM_PHONEBOOK
+    END
+    POPUP   "Card"
+    BEGIN
+        MENUITEM    "Add...\tF7",       IDM_ADD
+        MENUITEM    "Delete\tF8",       IDM_DELETE
+        MENUITEM    "Duplicate",        IDM_DUPLICATE
+        MENUITEM    "Autodial...\tF5",  IDM_DIAL
+    END
+    POPUP "Search"
+    BEGIN
+        MENUITEM    "Go To...\tF4",     IDM_GOTO
+        MENUITEM    "Find...",          IDM_FIND
+        MENUITEM    "Find Next\tF3",    IDM_FINDNEXT
+    END
+END
+
+CFACCEL ACCELERATORS
+BEGIN
+    VK_DELETE, IDM_CUT,         VIRTKEY
+    VK_INSERT, IDM_PASTE,       VIRTKEY
+    VK_F2,     IDM_COPY,        VIRTKEY
+    VK_F3,     IDM_FINDNEXT,    VIRTKEY
+    VK_F4,     IDM_GOTO,        VIRTKEY
+    VK_F5,     IDM_DIAL,        VIRTKEY
+    VK_F6,     IDM_HEADER,      VIRTKEY
+    VK_F7,     IDM_ADD,         VIRTKEY
+    VK_F8,     IDM_DELETE,      VIRTKEY
+    VK_F9,     IDM_CARDFILE,    VIRTKEY
+    VK_F10,    IDM_PHONEBOOK,   VIRTKEY
+    VK_ESCAPE, IDM_UNDO,        VIRTKEY, SHIFT
+END

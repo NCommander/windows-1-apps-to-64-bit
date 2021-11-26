@@ -1,0 +1,328 @@
+
+
+ SHAPES
+
+ Start     Length     Name                   Class
+ 0001:0000 00AF3H     _TEXT                  CODE
+ 0002:0000 00010H     NULL                   BEGDATA
+ 0002:0010 00078H     _DATA                  DATA
+ 0002:0088 0000EH     CDATA                  DATA
+ 0002:0096 00000H     XIB                    DATA
+ 0002:0096 00000H     XI                     DATA
+ 0002:0096 00000H     XIE                    DATA
+ 0002:0096 00000H     XPB                    DATA
+ 0002:0096 00000H     XP                     DATA
+ 0002:0096 00000H     XPE                    DATA
+ 0002:0096 00000H     XCB                    DATA
+ 0002:0096 00000H     XC                     DATA
+ 0002:0096 00000H     XCE                    DATA
+ 0002:0096 00000H     CONST                  CONST
+ 0002:00A0 00000H     _BSS                   BSS
+ 0002:00A0 00000H     XOB                    BSS
+ 0002:00A0 00000H     XO                     BSS
+ 0002:00A0 00000H     XOE                    BSS
+ 0002:00A0 0002CH     c_common               BSS
+
+ Origin   Group
+ 0002:0   DGROUP
+
+ Address   Export                  Alias
+
+ 0001:0000 About                   About
+ 0001:048D ShapesWndProc           ShapesWndProc
+
+  Address         Publics by Name
+
+ 0001:0000       About
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  CHANGEMENU           (USER.153)
+ 0000:0000  Imp  CHECKMENUITEM        (USER.154)
+ 0001:05C0       chkstk
+ 0000:0000  Imp  CREATEPEN            (GDI.61)
+ 0000:0000  Imp  CREATESOLIDBRUSH     (GDI.66)
+ 0000:0000  Imp  CREATEWINDOW         (USER.41)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  DELETEOBJECT         (GDI.69)
+ 0000:0000  Imp  DIALOGBOX            (USER.87)
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  ELLIPSE              (GDI.24)
+ 0000:0000  Imp  ENDDIALOG            (USER.88)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  FILLRECT             (USER.81)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  GETINSTANCEDATA      (KERNEL.54)
+ 0000:0000  Imp  GETMENU              (USER.157)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  GETSTOCKOBJECT       (GDI.87)
+ 0000:0000  Imp  GETSYSCOLOR          (USER.180)
+ 0000:0000  Imp  GETSYSTEMMENU        (USER.156)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  INVALIDATERECT       (USER.125)
+ 0000:0000  Imp  LINETO               (GDI.19)
+ 0000:0000  Imp  LOADACCELERATORS     (USER.177)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  LOADSTRING           (USER.176)
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  LOCALCOMPACT         (KERNEL.13)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  LOCALREALLOC         (KERNEL.6)
+ 0000:0000  Imp  LOCALSIZE            (KERNEL.10)
+ 0000:0000  Imp  MAKEPROCINSTANCE     (KERNEL.51)
+ 0000:0000  Imp  MOVETO               (GDI.20)
+ 0000:0008  Abs  pAtomTable
+ 0000:0006  Abs  PLOCALHEAP
+ 0000:0000  Imp  POLYLINE             (GDI.37)
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:000E  Abs  pStackBot
+ 0000:000C  Abs  pStackMin
+ 0000:000A  Abs  pStackTop
+ 0000:0000  Imp  RECTANGLE            (GDI.27)
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0002:0004       rsrvptrs
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  SETBKMODE            (GDI.2)
+ 0000:0000  Imp  SETMAPMODE           (GDI.3)
+ 0000:0000  Imp  SETROP2              (GDI.4)
+ 0000:0000  Imp  SETVIEWPORTEXT       (GDI.14)
+ 0000:0000  Imp  SETVIEWPORTORG       (GDI.13)
+ 0000:0000  Imp  SETWINDOWEXT         (GDI.12)
+ 0000:0000  Imp  SETWINDOWORG         (GDI.11)
+ 0001:048D       ShapesWndProc
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0002:0030       STKHQQ
+ 0000:0000  Imp  TRANSLATEACCELERATOR (USER.178)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0001:035B       WINMAIN
+ 0001:0674       _brk
+ 0001:06B3       _calloc
+ 0002:0010       _cCurrentShape
+ 0001:05C0       _chkstk
+ 0001:004E       _DrawEllipse
+ 0001:0036       _DrawRect
+ 0001:00A6       _DrawStar
+ 0001:0068       _DrawTriangle
+ 0002:00A0       _edata
+ 0002:007A       _environ
+ 0002:0056       _errno
+ 0001:08EF       _exit
+ 0001:06DF       _free
+ 0002:00B2       _hAccelTable
+ 0001:07F4       _halloc
+ 0001:0831       _hfree
+ 0002:00A0       _hInst
+ 0002:00B4       _lpprocAbout
+ 0001:0690       _malloc
+ 0001:06FD       _realloc
+ 0001:066C       _sbrk
+ 0001:022C       _ShapesCommand
+ 0001:0271       _ShapesInit
+ 0001:013B       _ShapesPaint
+ 0001:00BE       _ShapesSetupDC
+ 0002:00B8       _szAbout
+ 0002:00C2       _szAppName
+ 0002:00A2       _szWindowTitle
+ 0001:067C       _toChandle
+ 0000:9876  Abs  __acrtused
+ 0002:004A       __aintdiv
+ 0002:003C       __amblksiz
+ 0001:0AA5       __aNFbulmul
+ 0001:0AC7       __aNlmul
+ 0001:0AA5       __aNNaulmul
+ 0001:0AC7       __aNulmul
+ 0001:05F1       __astart
+ 0001:05DD       __astkovr
+ 0002:007C       __child
+ 0001:05C0       __chkstk
+ 0001:0840       __cinit
+ 0001:05E0       __cintDIV
+ 0002:007E       __csigtab
+ 0001:0932       __ctermsub
+ 0002:0060       __doserrno
+ 0002:005E       __dosvermajor
+ 0002:005F       __dosverminor
+ 0001:0906       __exit
+ 0001:0723       __expand
+ 0002:004E       __fac
+ 0001:07D6       __ffree
+ 0001:07AD       __fmalloc
+ 0001:07E5       __fmsize
+ 0002:008A       __fpinit
+ 0001:05E3       __fptrap
+ 0001:0758       __freect
+ 0001:0749       __memavl
+ 0001:06EE       __msize
+ 0001:0654       __myalloc
+ 0001:078F       __nfree
+ 0001:076C       __nmalloc
+ 0001:05EC       __NMSG_TEXT
+ 0001:05EC       __NMSG_WRITE
+ 0001:079E       __nmsize
+ 0001:0653       __nullcheck
+ 0002:0060       __oserr
+ 0002:0062       __osfile
+ 0002:005E       __osmajor
+ 0002:005F       __osminor
+ 0002:005C       __psp
+ 0002:005A       __pspadr
+ 0001:095A       __setargv
+ 0001:0A3F       __setenvp
+ 0002:0058       __umaskval
+ 0002:0076       ___argc
+ 0002:0078       ___argv
+
+  Address         Publics by Value
+
+ 0000:0000  Imp  CREATEWINDOW         (USER.41)
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  ENDDIALOG            (USER.88)
+ 0000:0000  Imp  SETROP2              (GDI.4)
+ 0000:0000  Imp  SETVIEWPORTORG       (GDI.13)
+ 0000:0000  Imp  GETMENU              (USER.157)
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  SETBKMODE            (GDI.2)
+ 0000:0000  Imp  DIALOGBOX            (USER.87)
+ 0000:0000  Imp  SETWINDOWORG         (GDI.11)
+ 0000:0000  Imp  POLYLINE             (GDI.37)
+ 0000:0000  Imp  GETSYSCOLOR          (USER.180)
+ 0000:0000  Imp  LINETO               (GDI.19)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  CREATEPEN            (GDI.61)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:0000  Imp  LOCALREALLOC         (KERNEL.6)
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  GETSYSTEMMENU        (USER.156)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  LOCALCOMPACT         (KERNEL.13)
+ 0000:0000  Imp  SETWINDOWEXT         (GDI.12)
+ 0000:0000  Imp  DELETEOBJECT         (GDI.69)
+ 0000:0000  Imp  CREATESOLIDBRUSH     (GDI.66)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  GETSTOCKOBJECT       (GDI.87)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  SETMAPMODE           (GDI.3)
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  FILLRECT             (USER.81)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  CHECKMENUITEM        (USER.154)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0000:0000  Imp  ELLIPSE              (GDI.24)
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  MAKEPROCINSTANCE     (KERNEL.51)
+ 0000:0000  Imp  TRANSLATEACCELERATOR (USER.178)
+ 0000:0000  Imp  SETVIEWPORTEXT       (GDI.14)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  RECTANGLE            (GDI.27)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0000:0000  Imp  LOCALSIZE            (KERNEL.10)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  LOADSTRING           (USER.176)
+ 0000:0000  Imp  CHANGEMENU           (USER.153)
+ 0000:0000  Imp  GETINSTANCEDATA      (KERNEL.54)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  INVALIDATERECT       (USER.125)
+ 0000:0000  Imp  MOVETO               (GDI.20)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  LOADACCELERATORS     (USER.177)
+ 0000:0006  Abs  PLOCALHEAP
+ 0000:0008  Abs  pAtomTable
+ 0000:000A  Abs  pStackTop
+ 0000:000C  Abs  pStackMin
+ 0000:000E  Abs  pStackBot
+ 0000:9876  Abs  __acrtused
+ 0001:0000       About
+ 0001:0036       _DrawRect
+ 0001:004E       _DrawEllipse
+ 0001:0068       _DrawTriangle
+ 0001:00A6       _DrawStar
+ 0001:00BE       _ShapesSetupDC
+ 0001:013B       _ShapesPaint
+ 0001:022C       _ShapesCommand
+ 0001:0271       _ShapesInit
+ 0001:035B       WINMAIN
+ 0001:048D       ShapesWndProc
+ 0001:05C0       _chkstk
+ 0001:05C0       __chkstk
+ 0001:05C0       chkstk
+ 0001:05DD       __astkovr
+ 0001:05E0       __cintDIV
+ 0001:05E3       __fptrap
+ 0001:05EC       __NMSG_TEXT
+ 0001:05EC       __NMSG_WRITE
+ 0001:05F1       __astart
+ 0001:0653       __nullcheck
+ 0001:0654       __myalloc
+ 0001:066C       _sbrk
+ 0001:0674       _brk
+ 0001:067C       _toChandle
+ 0001:0690       _malloc
+ 0001:06B3       _calloc
+ 0001:06DF       _free
+ 0001:06EE       __msize
+ 0001:06FD       _realloc
+ 0001:0723       __expand
+ 0001:0749       __memavl
+ 0001:0758       __freect
+ 0001:076C       __nmalloc
+ 0001:078F       __nfree
+ 0001:079E       __nmsize
+ 0001:07AD       __fmalloc
+ 0001:07D6       __ffree
+ 0001:07E5       __fmsize
+ 0001:07F4       _halloc
+ 0001:0831       _hfree
+ 0001:0840       __cinit
+ 0001:08EF       _exit
+ 0001:0906       __exit
+ 0001:0932       __ctermsub
+ 0001:095A       __setargv
+ 0001:0A3F       __setenvp
+ 0001:0AA5       __aNFbulmul
+ 0001:0AA5       __aNNaulmul
+ 0001:0AC7       __aNlmul
+ 0001:0AC7       __aNulmul
+ 0002:0004       rsrvptrs
+ 0002:0010       _cCurrentShape
+ 0002:0030       STKHQQ
+ 0002:003C       __amblksiz
+ 0002:004A       __aintdiv
+ 0002:004E       __fac
+ 0002:0056       _errno
+ 0002:0058       __umaskval
+ 0002:005A       __pspadr
+ 0002:005C       __psp
+ 0002:005E       __osmajor
+ 0002:005E       __dosvermajor
+ 0002:005F       __osminor
+ 0002:005F       __dosverminor
+ 0002:0060       __oserr
+ 0002:0060       __doserrno
+ 0002:0062       __osfile
+ 0002:0076       ___argc
+ 0002:0078       ___argv
+ 0002:007A       _environ
+ 0002:007C       __child
+ 0002:007E       __csigtab
+ 0002:008A       __fpinit
+ 0002:00A0       _edata
+ 0002:00A0       _hInst
+ 0002:00A2       _szWindowTitle
+ 0002:00B2       _hAccelTable
+ 0002:00B4       _lpprocAbout
+ 0002:00B8       _szAbout
+ 0002:00C2       _szAppName
+
+Program entry point at 0001:05F1

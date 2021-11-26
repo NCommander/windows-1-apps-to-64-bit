@@ -1,0 +1,28 @@
+#
+#  Standard command line definitions
+#
+
+cp=cl -d -c -u -W2 -Alnw -Gsw -Os -Zpe
+#cp=cl -d -c -u -W2 -Asnw -Gsw -Os -Zpe
+
+#
+#  Standard inference rules
+#
+.c.obj:
+    $(cp) $*.c
+
+#
+#  The C File List
+#
+
+winemine.obj: winemine.c winemine.h
+
+winemdlg.obj: winemdlg.c
+
+winemine.res: winemine.rc  winemine.h
+    rc -r winemine.rc
+
+winemine.exe: winemine.def winemdlg.obj winemine.obj winemine.res 
+    link4 winemine winemdlg, winemine/align:16, /map, mlibw mlibc mlibfa libh/NOD, winemine.def
+    mapsym winemine
+    rc winemine.res

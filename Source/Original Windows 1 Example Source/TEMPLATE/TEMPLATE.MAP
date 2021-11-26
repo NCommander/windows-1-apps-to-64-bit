@@ -1,0 +1,434 @@
+
+
+ TEMPLATE
+
+ Start     Length     Name                   Class
+ 0001:0000 001FEH     _INIT                  CODE
+ 0002:0000 00CD7H     _NRES                  CODE
+ 0003:0000 00357H     _RES                   CODE
+ 0004:0000 0065BH     _TEXT                  CODE
+ 0005:0000 00010H     NULL                   BEGDATA
+ 0005:0010 0006EH     _DATA                  DATA
+ 0005:007E 0000EH     CDATA                  DATA
+ 0005:008C 00000H     XIB                    DATA
+ 0005:008C 00000H     XI                     DATA
+ 0005:008C 00000H     XIE                    DATA
+ 0005:008C 00000H     XPB                    DATA
+ 0005:008C 00000H     XP                     DATA
+ 0005:008C 00000H     XPE                    DATA
+ 0005:008C 00000H     XCB                    DATA
+ 0005:008C 00000H     XC                     DATA
+ 0005:008C 00000H     XCE                    DATA
+ 0005:008C 00000H     CONST                  CONST
+ 0005:0090 00000H     _BSS                   BSS
+ 0005:0090 00000H     XOB                    BSS
+ 0005:0090 00000H     XO                     BSS
+ 0005:0090 00000H     XOE                    BSS
+ 0005:0090 00062H     c_common               BSS
+
+ Origin   Group
+ 0005:0   DGROUP
+
+ Address   Export                  Alias
+
+ 0002:00A0 TemplateAboutDlg        TemplateAboutDlg
+ 0002:0414 TemplateDlg             TemplateDlg
+ 0003:0085 TemplateWndProc         TemplateWndProc
+ 0003:0000 TimerAsync              TimerAsync
+ 0003:0064 TimerFlash              TimerFlash
+
+  Address         Publics by Name
+
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  CHANGEMENU           (USER.153)
+ 0000:0000  Imp  CHECKDLGBUTTON       (USER.97)
+ 0000:0000  Imp  CHECKMENUITEM        (USER.154)
+ 0000:0000  Imp  CHECKRADIOBUTTON     (USER.96)
+ 0004:0000       chkstk
+ 0000:0000  Imp  CREATEPEN            (GDI.61)
+ 0000:0000  Imp  CREATESOLIDBRUSH     (GDI.66)
+ 0000:0000  Imp  CREATEWINDOW         (USER.41)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  DELETEOBJECT         (GDI.69)
+ 0000:0000  Imp  DESTROYWINDOW        (USER.53)
+ 0000:0000  Imp  DIALOGBOX            (USER.87)
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  ENABLEMENUITEM       (USER.155)
+ 0000:0000  Imp  ENDDIALOG            (USER.88)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  FILLRECT             (USER.81)
+ 0000:0000  Imp  FLASHWINDOW          (USER.105)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  GETDC                (USER.66)
+ 0000:0000  Imp  GETDLGITEM           (USER.91)
+ 0000:0000  Imp  GETDLGITEMTEXT       (USER.93)
+ 0000:0000  Imp  GETFOCUS             (USER.23)
+ 0000:0000  Imp  GETINSTANCEDATA      (KERNEL.54)
+ 0000:0000  Imp  GETMENU              (USER.157)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  GETSCROLLPOS         (USER.63)
+ 0000:0000  Imp  GETSTOCKOBJECT       (GDI.87)
+ 0000:0000  Imp  GETSYSCOLOR          (USER.180)
+ 0000:0000  Imp  GETSYSTEMMENU        (USER.156)
+ 0000:0000  Imp  GETSYSTEMMETRICS     (USER.179)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  INVALIDATERECT       (USER.125)
+ 0000:0000  Imp  INVERTRECT           (USER.82)
+ 0000:0000  Imp  ISDLGBUTTONCHECKED   (USER.98)
+ 0000:0000  Imp  KILLTIMER            (USER.12)
+ 0000:0000  Imp  LINETO               (GDI.19)
+ 0000:0000  Imp  LOADACCELERATORS     (USER.177)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  LOADSTRING           (USER.176)
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  LOCALCOMPACT         (KERNEL.13)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  LOCALREALLOC         (KERNEL.6)
+ 0000:0000  Imp  LOCALSIZE            (KERNEL.10)
+ 0000:0000  Imp  MAKEPROCINSTANCE     (KERNEL.51)
+ 0000:0000  Imp  MESSAGEBEEP          (USER.104)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0000:0000  Imp  MOVETO               (GDI.20)
+ 0000:0008  Abs  pAtomTable
+ 0000:0006  Abs  PLOCALHEAP
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:000E  Abs  pStackBot
+ 0000:000C  Abs  pStackMin
+ 0000:000A  Abs  pStackTop
+ 0000:0000  Imp  RECTANGLE            (GDI.27)
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  RELEASEDC            (USER.68)
+ 0005:0004       rsrvptrs
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  SENDDLGITEMMESSAGE   (USER.101)
+ 0000:0000  Imp  SETBKMODE            (GDI.2)
+ 0000:0000  Imp  SETDLGITEMTEXT       (USER.92)
+ 0000:0000  Imp  SETFOCUS             (USER.22)
+ 0000:0000  Imp  SETSCROLLPOS         (USER.62)
+ 0000:0000  Imp  SETSCROLLRANGE       (USER.64)
+ 0000:0000  Imp  SETTEXTCOLOR         (GDI.9)
+ 0000:0000  Imp  SETTIMER             (USER.10)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0005:0024       STKHQQ
+ 0002:00A0       TemplateAboutDlg
+ 0002:0414       TemplateDlg
+ 0003:0085       TemplateWndProc
+ 0000:0000  Imp  TEXTOUT              (GDI.33)
+ 0003:0000       TimerAsync
+ 0003:0064       TimerFlash
+ 0000:0000  Imp  TRANSLATEACCELERATOR (USER.178)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0003:02E0       WINMAIN
+ 0005:001A       _bCheckBox
+ 0004:00DB       _brk
+ 0004:0145       _calloc
+ 0005:00C2       _cchContent
+ 0004:0000       _chkstk
+ 0005:0090       _edata
+ 0005:006E       _environ
+ 0005:004A       _errno
+ 0004:044B       _exit
+ 0005:0010       _fDisplay
+ 0005:001C       _fDoAsync
+ 0005:001E       _fDoFlash
+ 0005:0012       _fRadioButton
+ 0005:00DC       _fRadioButtonTemp
+ 0004:0182       _free
+ 0005:00B2       _hAccelTable
+ 0004:0336       _halloc
+ 0005:00E4       _hbrBlack
+ 0005:0090       _hbrWhite
+ 0004:0381       _hfree
+ 0005:00F0       _hInstTemplate
+ 0005:00DE       _hWndTemplate
+ 0005:0014       _iSel
+ 0005:00C4       _lpprocTemplateAboutDlg
+ 0005:00E0       _lpprocTemplateDlg
+ 0005:00B4       _lpprocTimerAsync
+ 0005:00C8       _lpprocTimerFlash
+ 0004:0111       _malloc
+ 0005:0018       _posH
+ 0005:0016       _posV
+ 0004:01B8       _realloc
+ 0004:00C5       _sbrk
+ 0002:0000       _ShowAsyncMessage
+ 0005:00E6       _szAppName
+ 0005:0092       _szContent
+ 0005:00B8       _szDefault
+ 0005:00CC       _szStr
+ 0002:00E4       _TemplateCharInput
+ 0002:0101       _TemplateClose
+ 0002:016F       _TemplateCommand
+ 0002:030B       _TemplateCreate
+ 0002:07C1       _TemplateEndSession
+ 0002:07D4       _TemplateEraseBkgnd
+ 0002:084C       _TemplateGetFocus
+ 0002:0871       _TemplateHorzScroll
+ 0001:0000       _TemplateInitApp
+ 0001:011E       _TemplateInitInstance
+ 0002:0887       _TemplateKeyInput
+ 0002:089D       _TemplateLoseFocus
+ 0002:08B0       _TemplateMouse
+ 0002:08C3       _TemplateMove
+ 0002:08D6       _TemplatePaint
+ 0002:0BD0       _TemplateQueryEndSession
+ 0002:0C4A       _TemplateSize
+ 0002:0C60       _TemplateSysCommand
+ 0002:0CAE       _TemplateTimer
+ 0002:0CC1       _TemplateVertScroll
+ 0004:00F1       _toChandle
+ 0005:0020       __aaltstkovr
+ 0000:9876  Abs  __acrtused
+ 0004:060B       __aFFbulmul
+ 0004:062F       __aFlmul
+ 0004:060B       __aFNaulmul
+ 0004:062F       __aFulmul
+ 0005:003E       __aintdiv
+ 0005:0030       __amblksiz
+ 0004:003E       __astart
+ 0004:002A       __astkovr
+ 0005:0070       __child
+ 0004:0000       __chkstk
+ 0004:039C       __cinit
+ 0004:002D       __cintDIV
+ 0005:0072       __csigtab
+ 0004:0490       __ctermsub
+ 0005:0054       __doserrno
+ 0005:0052       __dosvermajor
+ 0005:0053       __dosverminor
+ 0004:0462       __exit
+ 0004:01EF       __expand
+ 0005:0042       __fac
+ 0004:0300       __ffree
+ 0004:02CB       __fmalloc
+ 0004:031B       __fmsize
+ 0005:0080       __fpinit
+ 0004:0030       __fptrap
+ 0004:0241       __freect
+ 0004:0226       __memavl
+ 0004:019D       __msize
+ 0004:00AB       __myalloc
+ 0004:0295       __nfree
+ 0004:0261       __nmalloc
+ 0004:0039       __NMSG_TEXT
+ 0004:0039       __NMSG_WRITE
+ 0004:02B0       __nmsize
+ 0004:00AA       __nullcheck
+ 0005:0054       __oserr
+ 0005:0056       __osfile
+ 0005:0052       __osmajor
+ 0005:0053       __osminor
+ 0005:0050       __psp
+ 0005:004E       __pspadr
+ 0004:04BC       __setargv
+ 0004:05A5       __setenvp
+ 0005:004C       __umaskval
+ 0005:006A       ___argc
+ 0005:006C       ___argv
+
+  Address         Publics by Value
+
+ 0000:0000  Imp  LINETO               (GDI.19)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  SETSCROLLPOS         (USER.62)
+ 0000:0000  Imp  ENABLEMENUITEM       (USER.155)
+ 0000:0000  Imp  SETTIMER             (USER.10)
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  RECTANGLE            (GDI.27)
+ 0000:0000  Imp  CHECKDLGBUTTON       (USER.97)
+ 0000:0000  Imp  LOCALSIZE            (KERNEL.10)
+ 0000:0000  Imp  KILLTIMER            (USER.12)
+ 0000:0000  Imp  GETDLGITEM           (USER.91)
+ 0000:0000  Imp  SETBKMODE            (GDI.2)
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  ISDLGBUTTONCHECKED   (USER.98)
+ 0000:0000  Imp  GETSTOCKOBJECT       (GDI.87)
+ 0000:0000  Imp  MAKEPROCINSTANCE     (KERNEL.51)
+ 0000:0000  Imp  CHECKRADIOBUTTON     (USER.96)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  RELEASEDC            (USER.68)
+ 0000:0000  Imp  CHECKMENUITEM        (USER.154)
+ 0000:0000  Imp  CHANGEMENU           (USER.153)
+ 0000:0000  Imp  SETDLGITEMTEXT       (USER.92)
+ 0000:0000  Imp  SETTEXTCOLOR         (GDI.9)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  CREATESOLIDBRUSH     (GDI.66)
+ 0000:0000  Imp  MOVETO               (GDI.20)
+ 0000:0000  Imp  GETINSTANCEDATA      (KERNEL.54)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0000:0000  Imp  SENDDLGITEMMESSAGE   (USER.101)
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  LOCALREALLOC         (KERNEL.6)
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:0000  Imp  GETDLGITEMTEXT       (USER.93)
+ 0000:0000  Imp  INVERTRECT           (USER.82)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  FLASHWINDOW          (USER.105)
+ 0000:0000  Imp  DELETEOBJECT         (GDI.69)
+ 0000:0000  Imp  TRANSLATEACCELERATOR (USER.178)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  GETSYSTEMMETRICS     (USER.179)
+ 0000:0000  Imp  ENDDIALOG            (USER.88)
+ 0000:0000  Imp  MESSAGEBEEP          (USER.104)
+ 0000:0000  Imp  GETFOCUS             (USER.23)
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  CREATEWINDOW         (USER.41)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  TEXTOUT              (GDI.33)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0000:0000  Imp  LOCALCOMPACT         (KERNEL.13)
+ 0000:0000  Imp  GETSYSCOLOR          (USER.180)
+ 0000:0000  Imp  GETSYSTEMMENU        (USER.156)
+ 0000:0000  Imp  GETSCROLLPOS         (USER.63)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  INVALIDATERECT       (USER.125)
+ 0000:0000  Imp  GETDC                (USER.66)
+ 0000:0000  Imp  LOADACCELERATORS     (USER.177)
+ 0000:0000  Imp  CREATEPEN            (GDI.61)
+ 0000:0000  Imp  SETFOCUS             (USER.22)
+ 0000:0000  Imp  SETSCROLLRANGE       (USER.64)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  FILLRECT             (USER.81)
+ 0000:0000  Imp  LOADSTRING           (USER.176)
+ 0000:0000  Imp  GETMENU              (USER.157)
+ 0000:0000  Imp  DESTROYWINDOW        (USER.53)
+ 0000:0000  Imp  DIALOGBOX            (USER.87)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0006  Abs  PLOCALHEAP
+ 0000:0008  Abs  pAtomTable
+ 0000:000A  Abs  pStackTop
+ 0000:000C  Abs  pStackMin
+ 0000:000E  Abs  pStackBot
+ 0000:9876  Abs  __acrtused
+ 0001:0000       _TemplateInitApp
+ 0001:011E       _TemplateInitInstance
+ 0002:0000       _ShowAsyncMessage
+ 0002:00A0       TemplateAboutDlg
+ 0002:00E4       _TemplateCharInput
+ 0002:0101       _TemplateClose
+ 0002:016F       _TemplateCommand
+ 0002:030B       _TemplateCreate
+ 0002:0414       TemplateDlg
+ 0002:07C1       _TemplateEndSession
+ 0002:07D4       _TemplateEraseBkgnd
+ 0002:084C       _TemplateGetFocus
+ 0002:0871       _TemplateHorzScroll
+ 0002:0887       _TemplateKeyInput
+ 0002:089D       _TemplateLoseFocus
+ 0002:08B0       _TemplateMouse
+ 0002:08C3       _TemplateMove
+ 0002:08D6       _TemplatePaint
+ 0002:0BD0       _TemplateQueryEndSession
+ 0002:0C4A       _TemplateSize
+ 0002:0C60       _TemplateSysCommand
+ 0002:0CAE       _TemplateTimer
+ 0002:0CC1       _TemplateVertScroll
+ 0003:0000       TimerAsync
+ 0003:0064       TimerFlash
+ 0003:0085       TemplateWndProc
+ 0003:02E0       WINMAIN
+ 0004:0000       _chkstk
+ 0004:0000       __chkstk
+ 0004:0000       chkstk
+ 0004:002A       __astkovr
+ 0004:002D       __cintDIV
+ 0004:0030       __fptrap
+ 0004:0039       __NMSG_WRITE
+ 0004:0039       __NMSG_TEXT
+ 0004:003E       __astart
+ 0004:00AA       __nullcheck
+ 0004:00AB       __myalloc
+ 0004:00C5       _sbrk
+ 0004:00DB       _brk
+ 0004:00F1       _toChandle
+ 0004:0111       _malloc
+ 0004:0145       _calloc
+ 0004:0182       _free
+ 0004:019D       __msize
+ 0004:01B8       _realloc
+ 0004:01EF       __expand
+ 0004:0226       __memavl
+ 0004:0241       __freect
+ 0004:0261       __nmalloc
+ 0004:0295       __nfree
+ 0004:02B0       __nmsize
+ 0004:02CB       __fmalloc
+ 0004:0300       __ffree
+ 0004:031B       __fmsize
+ 0004:0336       _halloc
+ 0004:0381       _hfree
+ 0004:039C       __cinit
+ 0004:044B       _exit
+ 0004:0462       __exit
+ 0004:0490       __ctermsub
+ 0004:04BC       __setargv
+ 0004:05A5       __setenvp
+ 0004:060B       __aFFbulmul
+ 0004:060B       __aFNaulmul
+ 0004:062F       __aFlmul
+ 0004:062F       __aFulmul
+ 0005:0004       rsrvptrs
+ 0005:0010       _fDisplay
+ 0005:0012       _fRadioButton
+ 0005:0014       _iSel
+ 0005:0016       _posV
+ 0005:0018       _posH
+ 0005:001A       _bCheckBox
+ 0005:001C       _fDoAsync
+ 0005:001E       _fDoFlash
+ 0005:0020       __aaltstkovr
+ 0005:0024       STKHQQ
+ 0005:0030       __amblksiz
+ 0005:003E       __aintdiv
+ 0005:0042       __fac
+ 0005:004A       _errno
+ 0005:004C       __umaskval
+ 0005:004E       __pspadr
+ 0005:0050       __psp
+ 0005:0052       __dosvermajor
+ 0005:0052       __osmajor
+ 0005:0053       __osminor
+ 0005:0053       __dosverminor
+ 0005:0054       __oserr
+ 0005:0054       __doserrno
+ 0005:0056       __osfile
+ 0005:006A       ___argc
+ 0005:006C       ___argv
+ 0005:006E       _environ
+ 0005:0070       __child
+ 0005:0072       __csigtab
+ 0005:0080       __fpinit
+ 0005:0090       _hbrWhite
+ 0005:0090       _edata
+ 0005:0092       _szContent
+ 0005:00B2       _hAccelTable
+ 0005:00B4       _lpprocTimerAsync
+ 0005:00B8       _szDefault
+ 0005:00C2       _cchContent
+ 0005:00C4       _lpprocTemplateAboutDlg
+ 0005:00C8       _lpprocTimerFlash
+ 0005:00CC       _szStr
+ 0005:00DC       _fRadioButtonTemp
+ 0005:00DE       _hWndTemplate
+ 0005:00E0       _lpprocTemplateDlg
+ 0005:00E4       _hbrBlack
+ 0005:00E6       _szAppName
+ 0005:00F0       _hInstTemplate
+
+Program entry point at 0004:003E

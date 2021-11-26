@@ -1,0 +1,12 @@
+NAME           WINEMINE
+DESCRIPTION    'WineMine'
+STUB           'WINSTUB.EXE'
+CODE           MOVEABLE
+DATA           MOVEABLE MULTIPLE
+HEAPSIZE       4096
+STACKSIZE      24576
+EXPORTS        MainProc
+               CustomDlgProc
+               CongratsDlgProc
+               TimesDlgProc
+               AboutDlgProc
